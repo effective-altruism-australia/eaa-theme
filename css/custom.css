@@ -1,0 +1,895 @@
+header a.logo img{
+  height: 40px;
+}
+
+h3,h2,h1{
+  font-weight: 300 !important;
+}
+
+h4{
+  font-weight: 400 !important;
+}
+
+.contact-form{
+  margin-top: 20px;
+}
+
+.ea-not-front-banner{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header a.logo{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.eahub_banner{
+  width: 100%;
+  height: 100vh;
+  max-height: 1537px;
+  position: relative;
+  top:0;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.eahub_banner_text{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: table;
+  text-align: center;
+  table-layout: fixed;
+}
+
+.eahub_banner_overlay{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.25);
+}
+
+.eahub_banner section, .eahub_banner #map{
+  height: 99%;
+  width: 100%;
+  position: absolute;
+  max-width: 100%;
+  margin:0;
+}
+
+.navbar-default li a[href="/donate"]{
+  background-color: #498fb3;
+}
+
+input{
+  color: black;
+}
+
+.navbar-default li a[href="/donate"]:hover{
+  background-color: white;
+  color: #498fb3;
+}
+
+.vcenter{
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.call-to-action{
+  padding: 15px;
+}
+
+.eahub_banner hr{
+  width: 470px;
+  max-width: 50%;
+}
+
+.ea-img-row img{
+  width:100%;
+  height: auto;
+}
+
+.ea-img-row-img{
+  padding: 0;
+  margin-bottom: 1em;
+}
+
+.ea-img-row-text{
+  padding: 0;
+}
+
+.ea-in-news img{
+  height: auto;
+  max-width: 200px;
+  margin: 10px 0;
+}
+
+.menu.nav.navbar-nav{
+  float: right;
+}
+
+.ea-header{
+  font-weight: 200;
+  text-transform: uppercase;
+  padding-bottom: 1em;
+}
+
+.ea-title{
+  text-transform: Uppercase;
+  font-weight: 200;
+}
+
+
+.ea-title::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 50px;
+    height: 1px;
+    margin-left: -25px;
+    background-color: #498fb3;
+}
+
+.ea-title-wrapper{
+  padding: 0.3em;
+  position: relative;
+  margin-bottom: 3em;
+}
+
+.ea-social li {
+    list-style: none;
+    display: inline;
+    margin: 0 14px;
+}
+
+.ea-social ul {
+    padding: 0;
+    margin: 20px 0;
+}
+
+.ea-social img {
+    height: 2.5em;
+}
+
+.ea-charity-recommendations{
+  margin-top: 1.8em;
+}
+
+.ea-our-process-logo{
+  text-align: center;
+  margin: 3em 0;
+}
+
+.ea-our-process-logo img{
+  max-width: 90%;
+  margin: 10px;
+}
+.ea-charity-recommendations img{
+  height: 4.5em;
+  margin-bottom: 10px;
+}
+
+.ea-team img{
+  border-radius: 50%;
+}
+
+a.btn-links{
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+a.btn-links:hover{
+  color: #498fb3;
+  border: 1px solid #498fb3;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-default,.btn-primary{
+  background-color: #498fb3;
+  color: white;
+  border: 1px solid #498fb3;
+  border-radius: 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+.btn-default:hover,.btn-primary:hover{
+  color: #498fb3;
+  background-color: white;
+}
+
+.menu.navbar-nav li.leaf.active a.active{
+  border-bottom:1px solid white;
+  background-color: transparent;
+  color: white;
+}
+
+li.leaf.active a.active:hover{
+  border-bottom:1px solid #498fb3;
+  background-color: transparent;
+  color: #498fb3;
+}
+
+.ea-glyphicon.glyphicon-heart::before{
+  color: red;
+}
+
+.ea-fa:before{
+  font: normal normal normal 14px/1 FontAwesome;
+  display: block;
+  margin: 25px;
+  text-align: center;
+  font-size: 1.4em;
+}
+
+.ea-glyphicon.glyphicon-fire::before{
+  color: orange;
+}
+
+.ea-glyphicon.glyphicon-signal::before{
+  color: aqua;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+  color: #498fb3;
+}
+
+.navbar-default .navbar-nav > li > a{
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.85em;
+}
+
+body.front.navbar-is-fixed-top{
+  padding-top: 0 !important;
+}
+
+body.node-type-webform.navbar-is-fixed-top,
+body.node-type-banner-page.navbar-is-fixed-top,
+body.node-type-banner-map-page.navbar-is-fixed-top,
+body.page-contact.navbar-is-fixed-top{
+  padding-top: 0 !important;
+}
+
+body.navbar-is-fixed-top.toolbar.toolbar-drawer{
+ padding-top: 64px !important;
+}
+
+body.navbar-is-fixed-top.toolbar{
+ padding-top: 30px !important;
+}
+
+.navbar-default{
+  background-color: black;
+  border-color: transparent;
+  transition: all 0.3s;
+}
+
+footer{
+  background-color: rgb(37, 37, 37);
+  color: white;
+  font-weight: 200 !important;
+}
+
+.ea-title-wrapper-px480{
+  position: absolute;
+  top: 30%;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.ea-px480-hidden{
+  display: none;
+}
+
+.ea-welcome-text{
+  font-weight: 300;
+  font-size: 24px;
+  margin-bottom: 55px;
+}
+
+.ea-values{
+  font-size: 1.8em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.ea-glyphicon:before{
+  font-family: 'Glyphicons Halflings';
+  display: block;
+  margin: 25px;
+  text-align: center;
+  font-size: 1.4em;
+}
+
+.ea-social{
+  margin: 2em 0;
+}
+
+.ea-glyphicon-inline:before{
+  font-family: 'Glyphicons Halflings';
+  display: inline;
+  margin-right: 1em;
+  text-align: center;
+  font-size: 0.9em;
+  color: #498fb3;
+}
+
+.ea-section{
+  padding-top: 1.5em;
+  padding-bottom: 3em;
+}
+
+.ea-footer-bottom{
+  background-color: #1c1c1c;
+  padding: 1em  3em;
+}
+
+.ea-footer-top{
+  padding: 5em 0;
+}
+
+.ea-not-front-banner{
+  height: 300px;
+  position: relative;
+  margin-bottom: 3em;
+}
+
+.ea-team{
+  margin-bottom: 3em;
+}
+
+.slick-list,.slick-track{
+  height:100%;
+}
+
+.ea-slide-1{
+  background-image:url('/wp-content/uploads/header-bg.jpg');
+}
+.ea-slide-2{
+  background-image:url('/wp-content/uploads/deworming-education.jpg');
+}
+.ea-slide-3{
+  background-image:url('/sites/default/media/au_images/Deworming.jpg');
+}
+
+.ea-slide{
+  background-size: cover;
+  background-position: center;
+  height:100%;
+  width: 100%;
+}
+
+.ea-slider-container{
+  height: 100%;
+  width: 100%;
+}
+
+.ea-overlay-text{
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  color: white;
+  z-index; 100;
+  text-align: center;
+}
+
+.ea-overlay-text h2{
+    font-weight: 300;
+}
+
+.ea-overlay{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top:0;
+}
+
+.ea-overlay-map{
+  opacity: 0.2;
+}
+
+.eahub_banner hr{
+  margin-top: 15px;
+  margin-bottom: 7px;
+}
+
+.eahub_banner h1{
+  color: white;
+  font-size: 2em;
+  font-weight: 300;
+  display: block !important;
+  overflow: hidden;
+}
+
+.eahub_banner span{
+  color: white;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+@media(min-width:480px){
+
+  .ea-img-row{
+    position: relative;
+  }
+
+  .ea-img-row-text{
+    position: absolute;
+    transform: translate(0,-50%);
+    z-index: 100;
+    top: 50%;
+    padding: 10%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .ea-px480-only{
+    display: none;
+  }
+
+  .ea-px480-hidden{
+    display: block;
+  }
+}
+
+.ea-au-team-list{
+  padding-left: 0;
+  list-style: none;
+}
+
+.ea-au-team-list li{
+  width: 45%;
+  margin: 10px;
+  display: inline-block;
+}
+
+.navbar-default .dropdown-menu{
+  padding: 0 0;
+}
+
+.menu.navbar-nav li.leaf.active a.active{
+  border-left: 3px solid white;
+  background-color: transparent;
+  color: white;
+  border-right: 1px solid white;
+}
+
+@media(max-width:640px){
+  .ea-overlay-text h2{
+    font-size: 22px;
+  }
+}
+
+@media(min-width:768px){
+
+
+  .navbar-default{
+    background-color: #252525;
+    border-color: #252525;
+  }
+
+  .navbar-default .navbar-header{
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .ea-transparent-nav.navbar-default{
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .navbar-default ul.menu.nav.navbar-nav{
+    background-color: transparent;
+  }
+
+  .eahub_banner h1{
+    color: white;
+    font-size: 4em;
+    font-weight: 300;
+    display: block !important;
+    overflow: hidden;
+  }
+
+  .eahub_banner hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .eahub_banner span{
+    color: white;
+    font-size: 2em;
+    font-weight: 300;
+  }
+
+  .ea-title-wrapper-sm{
+    display:none;
+  }
+  .ea-sm-hidden{
+    display: block;
+  }
+
+  .ea-md-push-right{
+    float: right;
+  }
+
+  .ea-in-news img{
+    height: 2.5em;
+  }
+
+  .ea-container-max-width{
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 1.8em;
+    padding-left: 1.8em;
+  }
+
+  .ea-left-hvcenter{
+    top: 50%;
+    position: absolute;
+    width: 50%;
+    transform: translate(-50%,-50%);
+    left: 25%;
+    padding: 0 30px;
+    text-align: center;
+  }
+
+  .ea-right-hvcenter{
+    top: 50%;
+    position: absolute;
+    width: 50%;
+    transform: translate(-50%,-50%);
+    left: 75%;
+    padding: 0 30px;
+    text-align: center;
+  }
+
+  .ea-img-row-img{
+    margin-bottom: 0;
+  }
+
+  .ea-img-row{
+    position: relative;
+  }
+
+  footer{
+    padding: 0 !important;
+  }
+
+  .ea-md-align-right{
+    text-align: right;
+  }
+
+  .ea-px480-only{
+    display: none;
+  }
+
+  .ea-px480-hidden{
+    display: block;
+  }
+
+  .eahub_banner_text{
+    margin-top: 100px;
+  }
+
+}
+
+body.front.navbar-is-fixed-top.admin-menu{
+  padding-top: 0 !important;
+}
+
+.vcenter-outer{
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+
+.vcenter-inner{
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-form .form-textarea-wrapper{
+  width: 90%;
+  max-width: 500px;
+}
+
+.btn-show-ea-map{
+  display: inline-block;
+  overflow: hidden;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.btn-show-ea-map:hover{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-show-ea-map:hover .hover-hide{
+  margin-top: 40px;
+}
+
+.hover-show{
+  margin-top: -40px;
+  transition: all 0.3s;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.hover-hide{
+  font-size: 2em;
+  color: white;
+}
+
+.btn-show-ea-map:hover .hover-show{
+  margin-top: 0;
+}
+
+.ea-btn-more{
+  position: absolute;
+  bottom: 0;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  width: 100%;
+}
+
+.ea-map-banner[data-expanded="1"]{
+  height: 500px;
+}
+
+h4.eahub{
+  font-weight: 200;
+}
+
+h4.eahub a{
+  color: white;
+}
+
+.ea-map-banner{
+  background-color: grey;
+  height: 300px;
+  transition: all 0.3s;
+}
+
+.footer{
+  padding-bottom: 0;
+}
+
+.navbar-default .navbar-brand{
+  color: white;
+}
+
+.navbar-default .navbar-brand:hover{
+  color: lightgrey;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+  color: white;
+  background: none;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
+  border-radius: 0;
+  background-color: #498fb3;
+  color: white;
+}
+
+.half-page-image{
+  background-position:50%;
+  background-size: cover;
+  max-height: 50vh;
+  height:500px;
+  background-repeat: no-repeat;
+}
+
+.ea-full-width-div{
+  margin-left: -30px;
+  margin-right: -30px;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+  border-color: transparent;
+}
+
+.navbar-collapse{
+  box-shadow: none;
+}
+
+.menu.nav.navbar-nav{
+  background-color: #252525;
+}
+
+header .navbar-header{
+  background-color: #252525;
+  border-color: #252525;
+}
+
+header.ea-transparent-nav .navbar-header{
+  background-color:transparent;
+  border-color: transparent;
+}
+
+.navbar-nav .dropdown-menu{
+  background-color:#252525;
+  color:white;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a{
+  color: white;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover{
+  color: #B1AFAF;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle{
+    border: none;
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar{
+    background-color: #498fb3;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+  background-color: white;
+}
+
+.col-md-2-4{
+  width: 20%;
+  float: left;
+}
+
+.col-md-2-4 a{
+border: 0;
+text-decoration: none;
+box-shadow: none;
+
+}
+
+/* These styles were taken from style.css after Harysh migrated from Drupal to WP2017 theme, they need to be reviewed */
+
+.ea-restricted-width{
+	max-width: 1000px;
+	padding-left: 3em;
+	padding-right: 3em;
+	margin: auto;
+}
+
+.ea-full-width{
+	max-width: 100%;
+}
+
+.navigation-top nav{
+	display: inline-block;
+	float: right;
+}
+
+.navigation-top{
+	position: relative;
+}
+
+.site-branding, .custom-header{
+	margin-bottom: 0 !important;
+	padding: 0;
+}
+
+.navigation-top .custom-header{
+	display: inline-block;
+}
+
+.navigation-top .custom-header .wrap{
+	padding: 0;
+}
+
+.site-title{
+	font-size: 2em;
+}
+
+.site-description{
+	display: none;
+}
+
+.custom-logo{
+	height: 48px;
+}
+
+.custom-logo-link{
+	padding-right: 1em;
+}
+
+.elementor-image-box-img img[title="singer"]{
+	border-radius: 50% !important;
+}
+
+.site-footer{
+	margin-top: 0;
+	border-top: 0;
+}
+
+.social-navigation + .site-info, .site-info, nav.social-navigation{
+	margin-left: 0;
+	width: 100%;
+	text-align: center;
+	margin-left: 0;
+}
+
+body.has-header-image .site-title, body.has-header-video .site-title, body.has-header-image .site-title a, body.has-header-video .site-title a{
+	font-weight: 300;
+	letter-spacing: 2px;
+	color: black;
+}
+
+.menu-toggle{
+	margin-right: 0;
+}
+
+@media screen and (max-width: 48em){
+	.custom-header{
+		left: 50%;
+		transform: translate(-50%,0);
+	}
+
+}
+	.navigation-top .wrap{
+		padding-top: 15px;
+	}
+
+	.custom-logo-link{
+		padding-right: 0.5em;
+	}
+
+	.custom-logo-link img{
+		height: 40px;
+	}
+ 
+	.site-title{
+		font-size: 1.5em;
+	}
+}
+
+@media screen and (min-width: 48em){
+	.custom-header{
+		left:inherit;
+		transform: inherit;
+	}
+}
+
+@media screen and (max-width: 48em){
+	.menu-item .dropdown-toggle{
+		font-size: 16px;
+		line-height: 1.5;
+		margin: 0 auto;
+		display: inline;
+		position: relative;
+	}
+
+	.main-navigation .menu-item-has-children a{
+		display: inline
+	}
+}
