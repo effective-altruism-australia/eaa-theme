@@ -126,6 +126,7 @@ function eaa_scripts() {
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css');
 	wp_enqueue_style( 'bootstrap-theme-css', get_template_directory_uri() . '/css/bootstrap-theme.min.css');
 	wp_enqueue_style( 'eaa-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'ea-faq', get_template_directory_uri() . '/css/faq.css');
 
 	// JS
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'));

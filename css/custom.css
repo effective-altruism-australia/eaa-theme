@@ -272,7 +272,7 @@ body.navbar-is-fixed-top.toolbar{
 }
 
 .navbar-default{
-  background-color: black;
+  background: transparent;
   border-color: transparent;
   transition: all 0.3s;
 }
@@ -357,13 +357,13 @@ footer{
 }
 
 .ea-slide-1{
-  background-image:url('/wp-content/uploads/header-bg.jpg');
+  background-image:url('/eaa/wp-content/uploads/header-bg.jpg');
 }
 .ea-slide-2{
-  background-image:url('/wp-content/uploads/deworming-education.jpg');
+  background-image:url('/eaa/wp-content/uploads/deworming-education.jpg');
 }
 .ea-slide-3{
-  background-image:url('/sites/default/media/au_images/Deworming.jpg');
+  background-image:url('/eaa/wp-content/uploads/Deworming.jpg');
 }
 
 .ea-slide{
@@ -484,6 +484,7 @@ footer{
   }
 
   .navbar-default .navbar-header{
+    background: transparent;
     background-color: transparent;
     border-color: transparent;
   }
@@ -609,6 +610,10 @@ body.front.navbar-is-fixed-top.admin-menu{
 .contact-form .form-textarea-wrapper{
   width: 90%;
   max-width: 500px;
+}
+
+.btn-home-donate {
+    background-image: none;
 }
 
 .btn-show-ea-map{
@@ -785,6 +790,7 @@ box-shadow: none;
 	max-width: 100%;
 }
 
+
 .navigation-top nav{
 	display: inline-block;
 	float: right;
@@ -792,7 +798,9 @@ box-shadow: none;
 
 .navigation-top{
 	position: relative;
+	border: 0;
 }
+
 
 .site-branding, .custom-header{
 	margin-bottom: 0 !important;
@@ -823,6 +831,10 @@ box-shadow: none;
 	padding-right: 1em;
 }
 
+.site-content#content{
+	padding-top: 0;
+}
+
 .elementor-image-box-img img[title="singer"]{
 	border-radius: 50% !important;
 }
@@ -849,13 +861,13 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
 	margin-right: 0;
 }
 
+
 @media screen and (max-width: 48em){
 	.custom-header{
 		left: 50%;
 		transform: translate(-50%,0);
 	}
 
-}
 	.navigation-top .wrap{
 		padding-top: 15px;
 	}
@@ -867,7 +879,7 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
 	.custom-logo-link img{
 		height: 40px;
 	}
- 
+
 	.site-title{
 		font-size: 1.5em;
 	}
@@ -888,8 +900,205 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
 		display: inline;
 		position: relative;
 	}
-
+	
 	.main-navigation .menu-item-has-children a{
 		display: inline
 	}
+}
+
+@media screen and (max-width: 20em){
+	.site-title a{
+		letter-spacing: 1px;
+		font-size: 1em;
+	}
+
+	.custom-logo-link{
+		padding-right: 0;
+	}
+
+	.menu-toggle{
+		padding: 0.8em;
+		padding-right: 0.5em;
+	}
+}
+
+
+
+.single-featured-image-header {
+    height: 300px;
+    background-position: 50%;
+    background-size: cover;
+}
+
+.hv-center-container{
+	position: relative;
+}
+
+.hv-center-content{
+    margin: 0;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+footer .ea-header,footer label{
+    color: white;
+}
+
+.site-footer .widget-area ul li a img,.site-footer .widget-area ul li a{
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.ea-slider-container{
+	height: 100vh;
+}
+
+.ea-social a{
+	text-decoration: none;
+}
+
+.widget ul li{
+	border: 0;
+}
+
+#mc-embedded-subscribe{
+background-color: #498fb3;
+color: white;
+border: 1px solid #498fb3;
+border-radius: 0;
+padding: 10px 20px;
+text-transform: uppercase;
+}
+
+.col-md-2-4{
+  width: 20%;
+  float: left;
+}
+
+.col-md-2-4 a{
+border: 0;
+text-decoration: none;
+box-shadow: none;
+
+}
+
+.text-center{
+	text-align: center;
+}
+
+.site-info a,.navigation-top a{
+	color: white;
+}
+
+.navigation-top .sub-menu a{
+	color: black;
+}
+
+.featured-text{
+	color: white;
+}
+
+.single-featured-image-header,.eahub_banner{
+	margin-top: -72px;
+}
+
+.site-header,.navigation-top{
+	background-color: transparent;
+}
+
+.site-title a{
+	font-size: 0.6em;
+	font-weight: 300;
+	text-transform: capitalize;
+}
+
+/* FAQ CSS*/
+.nav > li > a:focus, .nav > li > a:hover{
+    background-color: transparent;
+}
+
+.faq-nav .panel{
+    box-shadow: none;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+.faq-nav.affix{
+    top: 70px;
+}
+
+.faq-nav.affix-bottom{
+    position: absolute;
+}
+
+.faq-nav {
+    width: 240px;
+    padding-top: 30px;
+}
+
+.faq-body h1,.faq-body h3{
+    font-weight: 300;
+}
+
+.faq-nav li > a:hover {
+    color: #444;
+    cursor: pointer;
+    border-left: 1px solid #498fb3;
+}
+
+.faq-nav ul li ul{
+    height: 0;
+    overflow: hidden;
+}
+
+.faq-nav ul li.active ul{
+    height: auto;
+    
+}
+
+.faq-nav li.active > a {
+    color: #498fb3;
+    cursor: pointer;
+    border-left: 1px solid #498fb3;
+}
+
+.faq-nav li > a.area, .faq-nav ul ul.in li > a, .faq-nav ul ul.collapsing li > a {
+    border-left: 1px solid #498fb3;
+}
+
+.faq-nav li > a.area.collapsed{
+    border-left: 1px solid #ccc;
+}    
+.faq-nav ul ul li > a {
+    padding-left: 30px;
+    text-transform: none;
+    padding-bottom: 8px;
+    font-size: 14px;
+}
+
+.faq-nav ul li > a {
+    border-left: 1px solid #ccc;
+    color: #707070;
+    padding: 8px 15px;
+    padding-bottom: 16px;
+    font-size: 12px;
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+.faq-nav ul li {
+    position: relative;
+    display: block
+}
+
+.faq-nav ul,.faq-body ol {
+    list-style: none;
+    padding: 0
 }

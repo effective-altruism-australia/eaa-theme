@@ -1,0 +1,88 @@
+
+/* FAQ CSS*/
+.nav > li > a:focus, .nav > li > a:hover{
+    background-color: transparent;
+}
+
+.faq-nav .panel{
+    box-shadow: none;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+.faq-nav.affix{
+    top: 70px;
+}
+
+.faq-nav.affix-bottom{
+    position: absolute;
+}
+
+.faq-nav {
+    width: 240px;
+    padding-top: 30px;
+}
+
+.faq-body h1,.faq-body h3{
+    font-weight: 300;
+}
+
+.faq-nav li > a:hover {
+    color: #444;
+    cursor: pointer;
+    border-left: 1px solid #498fb3;
+}
+
+.faq-nav ul li ul{
+    height: 0;
+    overflow: hidden;
+}
+
+.faq-nav ul li.active ul{
+    height: auto;
+    
+}
+
+.faq-nav li.active > a {
+    color: #498fb3;
+    cursor: pointer;
+    border-left: 1px solid #498fb3;
+}
+
+.faq-nav li > a.area, .faq-nav ul ul.in li > a, .faq-nav ul ul.collapsing li > a {
+    border-left: 1px solid #498fb3;
+}
+
+.faq-nav li > a.area.collapsed{
+    border-left: 1px solid #ccc;
+}    
+.faq-nav ul ul li > a {
+    padding-left: 30px;
+    text-transform: none;
+    padding-bottom: 8px;
+    font-size: 14px;
+}
+
+.faq-nav ul li > a {
+    border-left: 1px solid #ccc;
+    color: #707070;
+    padding: 8px 15px;
+    padding-bottom: 16px;
+    font-size: 12px;
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+.faq-nav ul li {
+    position: relative;
+    display: block
+}
+
+.faq-nav ul,.faq-body ol {
+    list-style: none;
+    padding: 0
+}
