@@ -18,6 +18,21 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+	<!-- Adjust opacity of navbar -->
+	<script>
+		jQuery(window).scroll(function() {
+			if(jQuery(this).scrollTop() > 150) {
+				jQuery('.navbar-fixed-top').addClass('opaque');
+			} else {
+				jQuery('.navbar-fixed-top').removeClass('opaque');
+			}
+			<?php 
+			if ( !has_post_thumbnail() ) {
+				echo "jQuery('.navbar-fixed-top').addClass('opaque');";
+			}?>
+		});
+
+	</script>
 </head>
 
 <body <?php body_class(); ?>>
