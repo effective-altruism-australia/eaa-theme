@@ -12,27 +12,49 @@
  * @package EAA
  */
 
-get_header(); ?>
+get_header();?>
+	<?php
+		if ( has_post_thumbnail() ) {
+			$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID), 'full' );
+			$relative_url = parse_url($thumbnail[0])[path];
+		?>
+		<div class="ea-not-front-banner" style="background-image: url(<?php echo $relative_url ?>); background-position-y: 50%;">
+			<div class="ea-overlay">
+				<div class="ea-overlay-text" style="opacity: 1;">
+				<?php $overlay = get_post_custom_values('banner-overlay-text', $post->ID);
+				  if(is_array($overlay))
+				  {
+					echo "<h2>" . $overlay[0] . "</h2>";
+				  }
+				?>
+				</div>
+			</div>
+	</div>
+	<div class="main-container container-fluid">
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="primary" class="content-area">
+					<main id="main" class="site-main">
+						
+							
+						<?php	
+						}
+						while ( have_posts() ) : the_post();
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+							get_template_part( 'template-parts/content', 'page' );
 
-			<?php
-			while ( have_posts() ) : the_post();
+							// If comments are open or we have at least one comment, load up the comment template.
+							if ( comments_open() || get_comments_number() ) :
+								comments_template();
+							endif;
 
-				get_template_part( 'template-parts/content', 'page' );
+						endwhile; // End of the loop.
+						?>
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-			endwhile; // End of the loop.
-			?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+					</main><!-- #main -->
+				</div><!-- #primary -->
+			</div>
+		</div> <!-- row -->
+	</div><!-- container -->
 <?php
-get_sidebar();
 get_footer();
