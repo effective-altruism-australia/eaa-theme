@@ -44,7 +44,7 @@ if ( ! function_exists( 'eaa_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'eaa' ),
+			'menu-1' => esc_html__( 'primary', 'eaa' ),
 		) );
 
 		/*
@@ -83,6 +83,9 @@ if ( ! function_exists( 'eaa_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'eaa_setup' );
 
+// Prevent wordpress from modifying page markup
+remove_filter( 'the_content', 'wpautop' );
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -118,11 +121,13 @@ add_action( 'widgets_init', 'eaa_widgets_init' );
  */
 function eaa_scripts() {
 
+	// CSS
 	wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/css/slick.css');
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css');
 	wp_enqueue_style( 'bootstrap-theme-css', get_template_directory_uri() . '/css/bootstrap-theme.min.css');
 	wp_enqueue_style( 'eaa-style', get_stylesheet_uri() );
 
+	// JS
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'));
 	wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/js/slick.min.js', array('jquery'));
 
@@ -158,3 +163,25 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Load custom WordPress nav walker.
+ */
+ require get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
+
+ // Bootstrap navigation
+function bootstrap_nav()
+{
+	wp_nav_menu( array(
+			'theme_location' => 'menu-1',
+			'menu_id'        => 'primary-menu',
+			'depth'             => 2,
+			'container'         => 'div',
+			'container_class'   => 'collapse navbar-collapse',
+			'container_id'      => 'navbar-collapse',
+            'menu_class'        => 'nav navbar-nav',
+            'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+            'walker'            => new wp_bootstrap_navwalker())
+    );
+}
+

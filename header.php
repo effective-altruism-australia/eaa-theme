@@ -22,35 +22,25 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'eaa' ); ?></a>
+	<header id="navbar" class="navbar navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="#" class="navbar-left logo">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ea_au_logo.png">
+				</a>
+			<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="sr-only"><?php _e('Toggle navigation','eaa') ?> </span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div> <!-- navbar-header -->
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+				<!-- Bootstrap navigation -->
+				<nav id="site-navigation" class="main-navigation navbar-right">
+					<?php	bootstrap_nav()	?>
+				</nav><!-- #site-navigation -->
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'eaa' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
-		</nav><!-- #site-navigation -->
+		</div><!-- .container-fluid -->
 	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
