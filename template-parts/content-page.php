@@ -10,18 +10,15 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="ea-container-max-width">
-		<div class="row">
-			<div class="col-sm-12">
-				<?php
-					the_content();
+	<div class="container-fluid ea-container-max-width">
+		<?php
+			the_content();
 
-					wp_link_pages( array(
-						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'eaa' ),
-						'after'  => '</div>',
-					) );
-				?>
-			</div>
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'eaa' ),
+				'after'  => '</div>',
+			) );
+		?>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

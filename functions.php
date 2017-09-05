@@ -116,26 +116,49 @@ function eaa_widgets_init() {
 }
 add_action( 'widgets_init', 'eaa_widgets_init' );
 
-/**
- * Enqueue scripts and styles.
- */
-function eaa_scripts() {
+function get_pagename()
+{
+	$pagename = get_query_var('pagename');  
+	if ( !$pagename && $id > 0 ) {  
+		// If a static page is set as the front page, $pagename will not be set. Retrieve it from the queried object  
+		$post = $wp_query->get_queried_object();  
+		$pagename = $post->post_name;  
+	}
+	return $pagename;
+}
 
-	// CSS
-	wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/css/slick.css');
-	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css');
-	wp_enqueue_style( 'bootstrap-theme-css', get_template_directory_uri() . '/css/bootstrap-theme.min.css');
+/**
+ * Enqueue styles
+ */
+function eaa_styles() {
+	wp_enqueue_style( 'slick', get_template_directory_uri() . '/css/slick.css');
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
+	wp_enqueue_style( 'bootstrap-theme', get_template_directory_uri() . '/css/bootstrap-theme.min.css');
 	wp_enqueue_style( 'eaa-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'ea-faq', get_template_directory_uri() . '/css/faq.css');
+}
 
-	// JS
+/**
+ * Enqueue scripts
+ */
+function eaa_scripts() {
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'));
 	wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/js/slick.min.js', array('jquery'));
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// Include page-specific scripts
+	switch(get_pagename()) // post_name is the post slug which is more consistent for matching to here
+	{
+		case 'videos':
+			wp_enqueue_script('video', get_template_directory_uri() . '/js/video/video.js', array('jquery'));
+			break;
+	}
 }
+
+add_action( 'wp_enqueue_scripts', 'eaa_styles' );
 add_action( 'wp_enqueue_scripts', 'eaa_scripts' );
 
 /**

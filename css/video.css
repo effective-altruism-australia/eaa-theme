@@ -154,22 +154,6 @@
         width: 50%;
         margin-left: 0%;
       }
-      .option-event,
-      .option-event-overlay {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 56.25%;
-      }
-      .option-event iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding-left: 5px;
-        padding-right: 5px;
-      }
     }
     /* iPad size */
 
@@ -224,27 +208,6 @@
 
     .option-event-overlay:hover {
       border-left: 5px solid #4c8fb1;
-    }
-
-    .main-event {
-      position: relative;
-      width: 100%;
-      height: 0;
-      padding-bottom: 56.25%;
-    }
-
-    .main-event iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .row-main-event {
-      margin-bottom: 15px;
-      padding-left: 40px;
-      padding-right: 40px;
     }
 
     .video-banner {

@@ -60,6 +60,33 @@ header a.logo img{
   background-color:white;  
 }
 
+/* Videos */
+
+.main-event {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.main-event iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.row-main-event {
+  margin-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.option-event {
+  padding-bottom: 15px;
+}
+
 /* Styles from old site */
 h3,h2,h1{
   font-weight: 300 !important;
