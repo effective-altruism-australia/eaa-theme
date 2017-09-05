@@ -839,118 +839,16 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
   }
 }
 
-
-/*
-@media screen and (min-width: 48em){
-	.custom-header{
-		left:inherit;
-		transform: inherit;
-	}
+@media(min-width:1024px){
+  /* Homepage */
+  .col-in-news {
+    width: 20%;
+    float: left;
+    padding: 0;
+  }
+  .col-in-news a {
+    border: 0;
+    text-decoration: none;
+    box-shadow: none;
+  }
 }
-
-@media screen and (max-width: 48em){
-	.menu-item .dropdown-toggle{
-		font-size: 16px;
-		line-height: 1.5;
-		margin: 0 auto;
-		display: inline;
-		position: relative;
-	}
-	
-	.main-navigation .menu-item-has-children a{
-		display: inline
-	}
-}
-
-@media screen and (max-width: 20em){
-	.site-title a{
-		letter-spacing: 1px;
-		font-size: 1em;
-	}
-
-	.custom-logo-link{
-		padding-right: 0;
-	}
-
-	.menu-toggle{
-		padding: 0.8em;
-		padding-right: 0.5em;
-	}
-}
-
-.single-featured-image-header {
-    height: 300px;
-    background-position: 50%;
-    background-size: cover;
-}
-
-.hv-center-container{
-	position: relative;
-}
-
-.hv-center-content{
-    margin: 0;
-	position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%) 
-}
-
-footer .ea-header,footer label{
-    color: white;
-}
-
-.site-footer .widget-area ul li a img,.site-footer .widget-area ul li a{
-	box-shadow: none;
-	-webkit-box-shadow: none;
-}
-
-.ea-slider-container{
-	height: 100vh;
-}
-
-.ea-social a{
-	text-decoration: none;
-}
-
-.widget ul li{
-	border: 0;
-}
-
-#mc-embedded-subscribe{
-background-color: #498fb3;
-color: white;
-border: 1px solid #498fb3;
-border-radius: 0;
-padding: 10px 20px;
-text-transform: uppercase;
-}
-
-
-.text-center{
-	text-align: center;
-}
-
-.site-info a,.navigation-top a{
-	color: white;
-}
-
-.navigation-top .sub-menu a{
-	color: black;
-}
-
-.featured-text{
-	color: white;
-}
-
-.site-header,.navigation-top{
-	background-color: transparent;
-}
-
-.site-title a{
-	font-size: 0.6em;
-	font-weight: 300;
-	text-transform: capitalize;
-}
-*/
