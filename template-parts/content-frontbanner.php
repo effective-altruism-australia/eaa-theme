@@ -12,7 +12,7 @@
                 <span>Independently-vetted programs, proven to save and improve lives.</span>
                 <br>
                 <br>
-                <a href="/donate" class="btn btn-default btn-home-donate">Donate Now</a>
+                <a href="/donate" class="btn btn-default ea-button-donate">Donate Now</a>
             </div>
         </div>
     </div>
