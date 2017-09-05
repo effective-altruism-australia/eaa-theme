@@ -1,0 +1,40 @@
+/* Navigation */
+.navbar-fixed-top { 
+	background: rgba(0,0,0,1);
+}
+header a.logo img{
+	height: 40px;
+	width: 242px;
+}
+.navbar .navbar-nav>li>a
+{
+	color: white;
+  border-color: #080808;
+}
+
+.dropdown-menu>li>a
+{
+	color: white;
+  border-color: #080808;
+}
+
+.navbar-nav .dropdown-menu{
+  background-color:#252525;
+  color:white;
+}
+
+#primary-menu li {
+  text-align: right;
+}
+
+.dropdown-menu li {
+  text-align: right;
+}
+
+.icon-bar{
+  background-color:white;  
+}
+
+body {
+    padding-top: 60px;
+}

@@ -135,7 +135,13 @@ function eaa_styles() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
 	wp_enqueue_style( 'bootstrap-theme', get_template_directory_uri() . '/css/bootstrap-theme.min.css');
 	wp_enqueue_style( 'eaa-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'navigation', get_template_directory_uri() . '/css/navigation/navigation.css');
 	wp_enqueue_style( 'ea-faq', get_template_directory_uri() . '/css/faq.css');
+
+	// Apply fading navigation if there is no featured image.
+	if (has_post_thumbnail() || is_front_page()) {
+		wp_enqueue_style( 'navigation-fade', get_template_directory_uri() . '/css/navigation/navigation-fade.css');
+	}
 }
 
 /**
@@ -144,6 +150,7 @@ function eaa_styles() {
 function eaa_scripts() {
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'));
 	wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/js/slick.min.js', array('jquery'));
+	wp_enqueue_script( 'navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'));
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

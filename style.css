@@ -18,48 +18,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 */
 
-/* Navigation */
-.navbar-fixed-top { 
-	background: rgba(255,255,255,0);
-	transition: background-color 2s ease 0s;
-}
-.navbar-fixed-top.opaque { 
-	background: rgba(0,0,0,1);
-	transition: background-color 2s ease 0s;
-}
-header a.logo img{
-	height: 40px;
-	width: 242px;
-}
-.navbar .navbar-nav>li>a
-{
-	color: white;
-  border-color: #080808;
-}
-
-.dropdown-menu>li>a
-{
-	color: white;
-  border-color: #080808;
-}
-
-.navbar-nav .dropdown-menu{
-  background-color:#252525;
-  color:white;
-}
-
-#primary-menu li {
-  text-align: right;
-}
-
-.dropdown-menu li {
-  text-align: right;
-}
-
-.icon-bar{
-  background-color:white;  
-}
-
 /* Videos */
 
 .main-event {
@@ -305,25 +263,6 @@ a.btn-links:hover{
 
 .ea-glyphicon.glyphicon-signal::before{
   color: aqua;
-}
-/* a */
-body.front.navbar-is-fixed-top{
-  padding-top: 0 !important;
-}
-
-body.node-type-webform.navbar-is-fixed-top,
-body.node-type-banner-page.navbar-is-fixed-top,
-body.node-type-banner-map-page.navbar-is-fixed-top,
-body.page-contact.navbar-is-fixed-top{
-  padding-top: 0 !important;
-}
-
-body.navbar-is-fixed-top.toolbar.toolbar-drawer{
- padding-top: 64px !important;
-}
-
-body.navbar-is-fixed-top.toolbar{
- padding-top: 30px !important;
 }
 
 footer{
@@ -626,10 +565,6 @@ footer{
     margin-top: 100px;
   }
 
-}
-
-body.front.navbar-is-fixed-top.admin-menu{
-  padding-top: 0 !important;
 }
 
 .vcenter-outer{
