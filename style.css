@@ -18,6 +18,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 */
 
+/* Allow some padding at the top for the navbar */
+body {
+    padding-top: 60px;
+}
+
 /* Videos */
 
 .main-event {

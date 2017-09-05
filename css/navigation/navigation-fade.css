@@ -1,3 +1,5 @@
+/* Should always be included after navigation.css */
+
 .navbar-fixed-top { 
 	background: rgba(255,255,255,0);
 	transition: background-color 2s ease 0s;

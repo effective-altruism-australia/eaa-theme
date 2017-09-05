@@ -6,35 +6,76 @@ header a.logo img{
 	height: 40px;
 	width: 242px;
 }
-.navbar .navbar-nav>li>a
-{
-	color: white;
-  border-color: #080808;
-}
 
-.dropdown-menu>li>a
-{
-	color: white;
-  border-color: #080808;
-}
-
-.navbar-nav .dropdown-menu{
-  background-color:#252525;
-  color:white;
-}
-
-#primary-menu li {
+.navbar-nav {
   text-align: right;
 }
 
 .dropdown-menu li {
   text-align: right;
 }
+.navbar .navbar-nav>li>a
+{
+  color: white;
+  border-color: #080808;
+}
+
+.navbar .navbar-nav>li>a:hover
+{
+  color: #498fb3
+}
+
+/* Donate Button */
+.navbar-nav > li:last-child a {
+   background-color: #498fb3;
+   color: white;
+}
+
+.navbar-nav li:last-child a:hover {
+   background-color: white;
+   color: #498fb3;
+}
+
+
+.dropdown-menu>li>a
+{
+  color: white;
+  border-color: #080808;
+}
+
+.dropdown-menu>li>a
+{
+  color: white;
+  border-color: #080808;
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover
+{
+    background-color: rgba(255,255,255,0);
+    background-image: none;
+}
+
+.navbar-nav .dropdown-menu {
+  background-color:#252525;
+  color:white;
+}
+
+.active
+{
+    border-bottom-color: white;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;   
+}
 
 .icon-bar{
   background-color:white;  
 }
 
-body {
-    padding-top: 60px;
+@media (min-width: 768px)
+{
+    .navbar-right
+    {
+        padding-right: 15px;
+    }
 }
+
