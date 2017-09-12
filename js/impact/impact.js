@@ -154,7 +154,7 @@ var DATABASE = {
 
 
 // DOM Ready
-jQuery(function() {
+$(function() {
 
     // Avoid `console` errors in browsers that lack a console.
     var method;
@@ -179,10 +179,10 @@ jQuery(function() {
 
     // Extend jQuery .on() & .bind() handlers with delay argument, for smooth resizing
     // Usage = .on('resize', function(){}, 100);
-    (function(jQuery) {
-      var bindings = { on: jQuery.fn.on, bind: jQuery.fn.bind };
-      jQuery.each(bindings, function(k){
-        jQuery.fn[k] = function () {
+    (function($) {
+      var bindings = { on: $.fn.on, bind: $.fn.bind };
+      $.each(bindings, function(k){
+        $.fn[k] = function () {
           var args = [].slice.call(arguments),
             delay = args.pop(),
             fn = args.pop(),
@@ -203,14 +203,14 @@ jQuery(function() {
     })(jQuery);
 
     // Animate all anchors
-    jQuery('a[href*=#]:not([href=#])').click(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
 
-        var target = jQuery(this.hash);
-        target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
         if (target.length) {
-          jQuery('html,body').animate({
+          $('html,body').animate({
             scrollTop: target.offset().top - 30
           }, 300);
           return false;
@@ -275,11 +275,11 @@ function getCharity(data, id) {
  */
 function setValues(params) {
   if (params.amount) {
-    jQuery(AMOUNT_INPUT).val(params.amount);
+    $(AMOUNT_INPUT).val(params.amount);
   }
 
   if (params.charity) {
-    jQuery('.charities [data-id="' + params.charity + '"]').trigger('click');
+    $('.charities [data-id="' + params.charity + '"]').trigger('click');
   }
 }
 
@@ -296,7 +296,7 @@ var getData = (function() {
       return;
     }
 
-    jQuery.getJSON('json/charities.json', function(data) {
+    $.getJSON('json/charities.json', function(data) {
       cache = data;
       callback(data);
     })
@@ -317,44 +317,44 @@ function buildSelector(data) {
 
   // Append charities
   data.charities.forEach(function(charity){
-    jQuery(toolbar).append('<option class="charities__charity" value="' + charity.id + '" data-icon="&#x' + charity.logo + ';">' + charity.name);
-    jQuery(titlebar).append('<span class="charities__charity charities__charity--titlebar" data-id="' + charity.id + '" data-icon="">' + charity.name + '</span>');
+    $(toolbar).append('<option class="charities__charity" value="' + charity.id + '" data-icon="&#x' + charity.logo + ';">' + charity.name);
+    $(titlebar).append('<span class="charities__charity charities__charity--titlebar" data-id="' + charity.id + '" data-icon="">' + charity.name + '</span>');
   });
 
   // Replace the default select
-  var select = jQuery(toolbar).dropkick({
+  var select = $(toolbar).dropkick({
     mobile: true,
     change: function(){
-      jQuery(toolbar).trigger('input');
+      $(toolbar).trigger('input');
     }
   });
 
-  jQuery(CHARITY_SELECT + ' .dk-option').each(function(i){
-    jQuery(this).attr('data-icon', jQuery(CHARITY_SELECT + ' option').eq(i).attr('data-icon') );
+  $(CHARITY_SELECT + ' .dk-option').each(function(i){
+    $(this).attr('data-icon', $(CHARITY_SELECT + ' option').eq(i).attr('data-icon') );
   });
 
   // Sync the selects
-  jQuery('.charities__charity').click(function(){
-    var id = jQuery(this).data('id') || jQuery(this).data('value'),
-        titleSelected = jQuery('.charities__charity--titlebar[data-id="' + id + '"]');
+  $('.charities__charity').click(function(){
+    var id = $(this).data('id') || $(this).data('value'),
+        titleSelected = $('.charities__charity--titlebar[data-id="' + id + '"]');
 
-    jQuery(titleSelected).siblings().removeClass('charities__charity--selected');
-    jQuery(titleSelected).addClass('charities__charity--selected');
+    $(titleSelected).siblings().removeClass('charities__charity--selected');
+    $(titleSelected).addClass('charities__charity--selected');
 
-    if (jQuery(this).hasClass('charities__charity--titlebar')){
+    if ($(this).hasClass('charities__charity--titlebar')){
       select.dropkick('select', id);
     }
 
   });
 
   // Sync the inputs
-  jQuery(AMOUNT_INPUT).on('input', function() {
-    var val = jQuery(this).val();
+  $(AMOUNT_INPUT).on('input', function() {
+    var val = $(this).val();
 
-    if (jQuery(this).hasClass('amount__input--titlebar')){
-      jQuery(AMOUNT_INPUT + '--toolbar').val(val);
+    if ($(this).hasClass('amount__input--titlebar')){
+      $(AMOUNT_INPUT + '--toolbar').val(val);
     } else {
-      jQuery(AMOUNT_INPUT + '--titlebar').val(val);
+      $(AMOUNT_INPUT + '--titlebar').val(val);
     }
   });
 }
@@ -420,13 +420,13 @@ function calcImpact(charity, amount) {
 function writeCharity(charity, elements){
 
   // Write charity info
-  jQuery(elements.organization).html(charity.organization);
-  jQuery(elements.numbers).html(charity.numbers);
-  jQuery(elements.recommendation).html(charity.recommendation);
+  $(elements.organization).html(charity.organization);
+  $(elements.numbers).html(charity.numbers);
+  $(elements.recommendation).html(charity.recommendation);
 
   // Write link hrefs to DOM
-  jQuery(elements.donate).attr('href', charity.donateURL);
-  jQuery(elements.info).attr('href', charity.infoURL);
+  $(elements.donate).attr('href', charity.donateURL);
+  $(elements.info).attr('href', charity.infoURL);
 }
 
 /**
@@ -437,7 +437,7 @@ function writeCharity(charity, elements){
  */
 function writeResults(charity, impacts, elements){
 
-  var currencySymbol = 'jQuery',
+  var currencySymbol = '$',
       currencyCode = 'AUD';
 
   if (typeof geoplugin_currencySymbol === 'function') {
@@ -446,10 +446,10 @@ function writeResults(charity, impacts, elements){
   };
 
   // Write intro text
-  jQuery(elements.intro).html('AjQuery ' + jQuery(AMOUNT_INPUT).val() + '  to ' + charity.name + ' can');
+  $(elements.intro).html('A$ ' + $(AMOUNT_INPUT).val() + '  to ' + charity.name + ' can');
 
   // Start with a fresh slate
-  jQuery(elements.results).empty();
+  $(elements.results).empty();
 
   // Write impacts
   impacts.forEach(function(impact, i){
@@ -469,26 +469,26 @@ function writeResults(charity, impacts, elements){
     }
 
     // Check if we're overwriting a results or creating new ones
-    if (jQuery('.result').eq(i).length){
-      jQuery('.result').eq(i).replaceWith(resultHTML);
+    if ($('.result').eq(i).length){
+      $('.result').eq(i).replaceWith(resultHTML);
     } else {
-      jQuery(elements.results).append(resultHTML);
+      $(elements.results).append(resultHTML);
     }
 
     // Check if we're replacing or adding the result
-    if (jQuery('.result').eq(i).children('.result__content').length){
-      jQuery('.result').eq(i).children('.result__content').replaceWith(result);
+    if ($('.result').eq(i).children('.result__content').length){
+      $('.result').eq(i).children('.result__content').replaceWith(result);
     } else {
-      jQuery('.result').eq(i).append(result);
+      $('.result').eq(i).append(result);
     }
 
     // Add the joiner, if it exists
     if (impact.joiner) {
       // Check if we're replacing or adding it
-      if (jQuery('.result').eq(i).children('.result__joiner').length){
-        jQuery('.result').eq(i).children('.result__joiner').replaceWith(joiner);
+      if ($('.result').eq(i).children('.result__joiner').length){
+        $('.result').eq(i).children('.result__joiner').replaceWith(joiner);
       } else {
-        jQuery('.result').eq(i).append(joiner);
+        $('.result').eq(i).append(joiner);
       }
     }
   });
@@ -498,14 +498,14 @@ function writeResults(charity, impacts, elements){
 'use strict';
 
 // DOM Ready
-jQuery(function(){
+$(function(){
 
   // Toolbar scroll
-  jQuery('.ic-content').waypoint(function(direction){
+  $('.ic-content').waypoint(function(direction){
     if (direction === 'down') {
-      jQuery('.toolbar').addClass('toolbar--scroll');
+      $('.toolbar').addClass('toolbar--scroll');
     } else {
-      jQuery('.toolbar').removeClass('toolbar--scroll');
+      $('.toolbar').removeClass('toolbar--scroll');
     }
   }, {
     offset: 100
@@ -519,11 +519,11 @@ jQuery(function(){
   });
 
   // Localise currency symbol
-  var currencySymbol = 'AjQuery';
+  var currencySymbol = 'A$';
   if (typeof geoplugin_currencySymbol === 'function') {
-    jQuery('<textarea />').html(geoplugin_currencySymbol()).text();
+    $('<textarea />').html(geoplugin_currencySymbol()).text();
   }
-  jQuery('.amount').attr('data-currency', currencySymbol);
+  $('.amount').attr('data-currency', currencySymbol);
 
   // Run the impact calc
   getData(function(data){
@@ -551,10 +551,10 @@ jQuery(function(){
     // Set up helper functions
     var processAll = function() {
       // Fetch the individual charity
-      charity = getCharity(data, jQuery(select).val());
+      charity = getCharity(data, $(select).val());
 
       // Calculate the impacts
-      impacts = calcImpact(charity, jQuery(amount).val());
+      impacts = calcImpact(charity, $(amount).val());
 
       // Write to the DOM
       writeCharity(charity, elements);
@@ -563,8 +563,8 @@ jQuery(function(){
 
     var processResult = function() {
       // Fetch data
-      charity = getCharity(data, jQuery(select).val());
-      impacts = calcImpact(charity, jQuery(amount).val());
+      charity = getCharity(data, $(select).val());
+      impacts = calcImpact(charity, $(amount).val());
 
       // Write to the DOM
       writeResults(charity, impacts, elements);
@@ -572,20 +572,20 @@ jQuery(function(){
 
 
     // Update the whole calc if charity changes
-    jQuery(select).on('input', function() {
+    $(select).on('input', function() {
       // Only run if we have both values
-      if (jQuery(amount).val() && jQuery(select).val()) {
+      if ($(amount).val() && $(select).val()) {
         // Do the swaparoo
-        if (jQuery('.placeholder').css('display') !== 'none'){
-          jQuery('.placeholder').fadeOut(150, function(){
+        if ($('.placeholder').css('display') !== 'none'){
+          $('.placeholder').fadeOut(150, function(){
             processAll();
-            jQuery('.ic-output').fadeIn(150);
-            jQuery('html, body').animate({ scrollTop: jQuery('.ic-content').offset.top - 80 }, 300);
+            $('.ic-output').fadeIn(150);
+            $('html, body').animate({ scrollTop: $('.ic-content').offset.top - 80 }, 300);
           });
         } else {
-          jQuery('.ic-output').fadeOut(150, function(){
+          $('.ic-output').fadeOut(150, function(){
             processAll();
-            jQuery(this).fadeIn(150);
+            $(this).fadeIn(150);
           });
         }
 
@@ -593,17 +593,17 @@ jQuery(function(){
     });
 
     // Only update result if amount changes
-    jQuery(AMOUNT_INPUT).on('input', function() {
+    $(AMOUNT_INPUT).on('input', function() {
 
       // Only run if we have both values
-      if (jQuery(amount).val() && jQuery(select).val()) {
+      if ($(amount).val() && $(select).val()) {
 
         // Do the swaparoo
-        if (jQuery('.placeholder').css('display') !== 'none'){
-          jQuery('.placeholder').fadeOut(150, function(){
+        if ($('.placeholder').css('display') !== 'none'){
+          $('.placeholder').fadeOut(150, function(){
             processAll();
-            jQuery('.ic-output').fadeIn(150);
-            jQuery('html, body').animate({ scrollTop: jQuery('.ic-content').offset().top - 80 }, 300);
+            $('.ic-output').fadeIn(150);
+            $('html, body').animate({ scrollTop: $('.ic-content').offset().top - 80 }, 300);
           });
         } else {
           processResult();
