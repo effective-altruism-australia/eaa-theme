@@ -142,6 +142,14 @@ function eaa_styles() {
 	if (has_post_thumbnail() || is_front_page()) {
 		wp_enqueue_style( 'navigation-fade', get_template_directory_uri() . '/css/navigation/navigation-fade.css');
 	}
+
+	// Include page-specific scripts
+	switch(get_pagename()) // post_name is the post slug which is more consistent for matching to here
+	{
+		case 'impact':
+			wp_enqueue_style('impact', get_template_directory_uri() . '/css/impact.css');
+			break;
+	}
 }
 
 /**
@@ -159,6 +167,9 @@ function eaa_scripts() {
 	// Include page-specific scripts
 	switch(get_pagename()) // post_name is the post slug which is more consistent for matching to here
 	{
+		case 'impact':
+			wp_enqueue_script('impact', get_template_directory_uri() . '/js/impact.js', array('jquery'));
+			break;
 		case 'videos':
 			wp_enqueue_script('video', get_template_directory_uri() . '/js/video/video.js', array('jquery'));
 			break;
