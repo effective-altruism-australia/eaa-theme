@@ -136,7 +136,6 @@ function eaa_styles() {
 	wp_enqueue_style( 'bootstrap-theme', get_template_directory_uri() . '/css/bootstrap-theme.min.css');
 	wp_enqueue_style( 'eaa-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'navigation', get_template_directory_uri() . '/css/navigation/navigation.css');
-	wp_enqueue_style( 'ea-faq', get_template_directory_uri() . '/css/faq.css');
 
 	// Apply fading navigation if there is no featured image.
 	if (has_post_thumbnail() || is_front_page()) {
@@ -144,8 +143,11 @@ function eaa_styles() {
 	}
 
 	// Include page-specific scripts
-	switch(get_pagename()) // post_name is the post slug which is more consistent for matching to here
+	switch(get_pagename()) 
 	{
+		case 'faq':
+			wp_enqueue_style('faq', get_template_directory_uri() . '/css/faq.css');
+			break;
 		case 'impact':
 			wp_enqueue_style('impact', get_template_directory_uri() . '/css/impact.css');
 			break;
@@ -168,9 +170,13 @@ function eaa_scripts() {
 	}
 
 	// Include page-specific scripts
-	switch(get_pagename()) // post_name is the post slug which is more consistent for matching to here
+	switch(get_pagename()) 
 	{
+		case 'faq':
+			wp_enqueue_script('faq', get_template_directory_uri() . '/js/faq.js', array('jquery'));
+			break;
 		case 'impact':
+			// Impact-unknown JS is imported from the Drupal site -- unsure what a lot of it does
 			wp_enqueue_script('impact-unknown', get_template_directory_uri() . '/js/impact/impact-unknown.js', array('jquery'));
 			wp_enqueue_script('impact', get_template_directory_uri() . '/js/impact/impact.js', array('jquery'));
 			break;
