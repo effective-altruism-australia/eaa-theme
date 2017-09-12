@@ -149,6 +149,9 @@ function eaa_styles() {
 		case 'impact':
 			wp_enqueue_style('impact', get_template_directory_uri() . '/css/impact.css');
 			break;
+		case 'videos':
+			wp_enqueue_style('video', get_template_directory_uri() . '/css/video.css');
+			break;
 	}
 }
 
