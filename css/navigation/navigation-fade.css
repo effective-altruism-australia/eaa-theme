@@ -1,11 +1,11 @@
 /* Should always be included after navigation.css */
 
-.navbar-header { 
+.navbar { 
 	background: rgba(255,255,255,0);
 	transition: background-color 2s ease 0s;
 }
 .navbar.opaque { 
-	background: rgba(0,0,0,1);
+	background: #333333;
 	transition: background-color 2s ease 0s;
 }
 

@@ -1,6 +1,6 @@
 /* Navigation */
-.navbar-header { 
-	background: rgba(0,0,0,1);
+.navbar { 
+	background: #333333;
 }
 
 header a.logo img{
@@ -20,11 +20,8 @@ header a.logo img{
 {
   color: white;
   border-color: #333333;
-}
-
-.nav>li>a
-{
-  padding-right: 40px;
+  text-transform: uppercase;
+  font-size: 0.85em;
 }
 
 .navbar .navbar-nav>li>a:hover
@@ -49,11 +46,11 @@ header a.logo img{
   float:right;
 }
 
-.dropdown-menu>li>a
+.navbar-nav .open .dropdown-menu>li>a
 {
   color: white;
   border-color: #333333;
-  padding-right: 5em;
+  padding-right: 3em;
 }
 
 .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover
