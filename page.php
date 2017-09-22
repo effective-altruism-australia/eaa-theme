@@ -16,7 +16,7 @@ get_header();?>
 	<?php
 		if ( has_post_thumbnail() ) {
 			$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID), 'full' );
-			$relative_url = parse_url($thumbnail[0])[path];
+			$relative_url = parse_url($thumbnail[0])['path'];
 		?>
 		<div class="ea-not-front-banner" style="background-image: url(<?php echo $relative_url ?>); background-position-y: 50%;">
 			<div class="ea-overlay">
