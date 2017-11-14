@@ -4,6 +4,8 @@ header a.logo img{
 
 h3,h2,h1{
   font-weight: 300 !important;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 h4{
