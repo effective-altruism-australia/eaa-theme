@@ -123,7 +123,7 @@ var DATABASE = {
         "text" :   {
           "fraction": "*% of the cost of funding one household with a cash grant equivalent to a year's income.",
           "single" : "Fund a household with a cash grant equivalent to a year's income.",
-          "plural" : "Fund * household with a cash grant equivalent to a year's income."
+          "plural" : "Fund * households with a cash grant equivalent to a year's income."
           }
         }
       ]
