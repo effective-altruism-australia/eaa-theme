@@ -8,8 +8,23 @@
     <div class="eahub_banner_text">
         <div class="vcenter">
             <div class="call-to-action">
-                <h1>Maximise the impact of your donations</h1><hr>
-                <span>Independently-vetted programs, proven to save and improve lives.</span>
+								<h1>
+								<?php $heading = get_post_custom_values('banner-overlay-heading-text', $post->ID);
+								 if(is_array($heading))
+								 {
+								 	echo $heading[0];
+								 }
+								 ?>
+								 </h1>
+								<hr>
+                <span>
+									<?php $subheading = get_post_custom_values('banner-overlay-subheading-text', $post->ID);
+									if(is_array($subheading))
+									{
+										echo $subheading[0];
+									}
+									?>	
+								</span>
                 <br>
                 <br>
                 <a href="/donate" class="btn btn-default ea-button-donate">Donate Now</a>
