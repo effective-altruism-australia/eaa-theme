@@ -20,7 +20,7 @@ get_header();?>
 		?>
 		<div class="ea-not-front-banner" style="background-image: url(<?php echo $relative_url ?>); background-position-y: 50%;">
 			<div class="ea-overlay">
-				<div class="ea-overlay-text" style="opacity: 1;">
+				<div class="ea-overlay-text">
 				<?php $overlay = get_post_custom_values('banner-overlay-text', $post->ID);
 				  if(is_array($overlay))
 				  {
