@@ -64,7 +64,7 @@
                         </div>
                         <div>
                             <p class="glyphicon-home ea-glyphicon-inline">Level 7, 41 Exhibition St, Melbourne VIC 3000, Australia</p>
-                            <p class="glyphicon-phone ea-glyphicon-inline">+61 3 8582 4849</p>
+                            <p class="glyphicon-phone ea-glyphicon-inline">0492 841 596</p>
                             <p class="glyphicon-envelope ea-glyphicon-inline"><a href="mailto:info@eaa.org.au">info@eaa.org.au</a></p>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
         <div class="ea-container-full-width  ea-footer-bottom">
             <div class="ea-container-max-width">
                 <div class="row">
-                    <div class="col-sm-6">© Effective Altruism Australia 2017</div>
+                    <div class="col-sm-6">© Effective Altruism Australia <?php echo date("Y"); ?></div>
                     <div class="col-sm-6 ea-md-align-right">
                         <a href="/terms">Terms of use </a>|<a href="/privacy"> Privacy Policy</a>
                     </div>
